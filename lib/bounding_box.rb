@@ -9,7 +9,7 @@ class BoundingBox
     @height = height
   end
 
-  def contains_point?
+  def contains_point?(x, y)
     if x <= @right && x >= @left && y >= @bottom && y <= @top
       true
     else
