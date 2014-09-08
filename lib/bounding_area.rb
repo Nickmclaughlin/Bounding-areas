@@ -5,10 +5,11 @@ class BoundingArea
  end
 
  def contains_point?(x, y)
-    if @area.length == 0
-      return false
-    else
-      return true
-    end
+  if @area.length == 0
+   return false
+  end
+  @area.each do |area|
+   return area.contains_point?(x, y)
+  end
  end
 end
